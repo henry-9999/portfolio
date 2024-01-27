@@ -1,0 +1,534 @@
+@font-face{
+    font-family: "Bauhaus93";
+    src:url(../fonts/Bauhaus93.ttf);
+}
+@font-face{
+    font-family: "Blackadder";
+    src:url(../fonts/Blackadder\ ITC\ Std\ Regular.otf);
+}
+@font-face{
+    font-family: "calibri light";
+    src:url(../fonts/calibril.ttf);
+}
+*{
+    cursor:none;
+}
+html{
+    padding:0;
+    margin:0;
+    cursor: none;
+    scroll-snap-type:  x mandatory;
+    scroll-behavior: smooth;
+}
+body{
+    padding:0;
+    margin:0;
+    background: black;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    scroll-snap-type:  y mandatory;
+
+}
+.cursor{
+    width:30px;
+    aspect-ratio: 1;
+    position:fixed;
+    background: transparent;
+    backdrop-filter: invert(1);
+    border-radius: 50%;
+    z-index: 10000;
+    transition: width 500ms;
+}
+.cursorImgHover{
+    background: black;
+    backdrop-filter: invert(0);
+}
+nav{
+    width:100%;
+    display:flex;
+    justify-content: center;
+    position: fixed;
+    margin-top: 20px;
+    height: 50px;
+    z-index: 100;
+}
+
+
+nav > div{
+    width:60%;
+    height:50px;
+    margin-inline: auto;
+    background: white;
+    border-radius: 10px 0 0  10px;
+    justify-self: center;
+    display:flex;    
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0 20px;
+    gap: 30px;
+    transition: width 500ms;
+}
+nav > div:hover{
+    width:65%;
+}
+.navEleCon div{
+    font-family: "Blackadder",'Courier New', Courier, monospace;
+    font-size: 1.5rem;
+    margin-right: auto;
+}
+
+.navEleCon li{
+    list-style-type: none;
+    height:100%;
+}
+.navEleCon a{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color:black;
+    height:100%;
+    height:100%;
+}
+
+.scroll{
+    width:100%;
+    height: 100vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+    
+}
+
+.scroll section{
+    scroll-snap-align: start;
+    min-height:650px;
+}
+
+.sec1{
+    display:flex;
+    width:100%;
+    height:100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.myImgCon{
+    width:15%;
+    height:fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+
+.myImg{
+    width:100%;
+    transition: scale 500ms;
+}
+.myImg:hover{
+    scale: 1.1;
+}
+.threeJump{
+    width:40px;
+
+    height:10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: visible;
+    transition: scale 500ms;
+
+
+}
+.threeJump:hover{
+    scale: 1.1;
+
+}
+.threeJump div{
+    width:10px;
+    aspect-ratio: 1;
+    background: white;
+    border-radius: 50%;
+    position:relative;
+}
+.threeJump1{
+    animation: 500ms moveUp alternate infinite;
+    
+}
+.threeJump2{
+    animation: 500ms moveUp alternate infinite;
+    animation-delay: 100ms;
+}
+.threeJump3{
+    animation: 500ms moveUp alternate infinite;
+    animation-delay: 200ms;
+}
+
+
+.aboutMe{
+    width:25%;
+    height:55%;
+    padding-left:3%;
+    padding-top: 1%;
+    box-sizing: border-box;
+    font-size: 1.2rem;
+}
+
+.aboutMe > h1{
+    color:white;
+    transition: scale 500ms;
+
+}
+.aboutMe > h1:hover{
+    scale: 1.1;
+
+}
+.aboutMe div{
+    text-align: justify;
+    white-space: wrap;
+    word-wrap: break-word;
+    color:white;
+    border-radius: 7px;
+    transition: all 500ms;
+
+}
+.aboutMe div:hover{
+    scale: 1.05;
+
+
+}
+
+.contactMesec1Con{
+    width:20%;
+    height:80%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    padding-bottom: 10%;
+
+}
+
+.contactMesec1Butt{
+    width:70%;
+    height:50px;
+    color:white;
+    background: transparent;
+    border:1px solid white;
+    transition: 
+        background 500ms,
+        color 500ms
+    ;
+
+}
+
+.contactMesec1Butt:hover{
+    color:black;
+    background: white;
+}
+
+
+
+/* sec2 */
+
+.sec2{
+    width:100%;
+    height:100vh;
+    background-color: red;
+
+    background-repeat: no-repeat;
+    background-position: 0;
+    background-size:100% 100%;
+    display: flex;
+    flex-direction: column;
+    z-index: -2;
+    position: relative;
+    z-index: 4;
+
+
+}
+
+.sec2Cover{
+    position: absolute;
+    width:100%;
+    height:100%;
+    background: black;
+    z-index: -1;
+    opacity: 0.5;
+    top:0;
+    transition: opacity 125ms;
+
+}
+.sec2CoverAni{
+
+    opacity: 1;
+
+
+}
+
+.perPro{
+    width:100%;
+    height:10%;
+    position: relative;
+    margin-top: 10%;
+    padding-left: 10%;
+    font-size: 2rem;
+    z-index: 5;
+    color:white;
+
+}
+
+.nextBackCon{
+    width:100%;
+    height:15%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 7%;
+    z-index: 5;
+
+}
+.back{
+
+    aspect-ratio: 1;
+    margin-left: 1%;
+    background: white;
+    border-radius: 50%;
+    border:none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.next
+{
+    aspect-ratio: 1;
+    margin-right: 1%;
+    
+    background: white;
+    border-radius: 50%;
+    border:none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.back img{
+    width: 100%;
+}
+.next img{
+    width: 100%;
+
+    rotate: 180deg;
+}
+
+.cheProjCon{
+    width:100%;
+    height:fit-content;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10%;
+    padding-left: 12.5%;
+    padding-right: 10%;
+
+    box-sizing: border-box;
+    z-index: 5;
+
+    
+}
+
+.webPortfName{
+    font-size: 2.5rem;
+    color:white;
+    font-family: "Bauhaus93","Blackadder",'Courier New', Courier, monospace;
+    width:fit-content;
+    transition: width 500ms;
+    
+}
+
+.cheProj{
+    width:fit-content;
+    padding: 2% 2%;
+    white-space: nowrap;
+    border:3px solid white;
+    background: transparent;
+    border-radius: 7px;
+    color:white;
+    font-size: 1.5rem;
+    font-family: "calibri light","Blackadder",'Courier New', Courier, monospace;
+    font-weight:bolder;
+    
+}
+
+
+.growwCon{
+    margin-top: 3%;
+    margin-inline: auto;
+    z-index: 5;
+
+}
+
+.groww{
+    width:70px;
+    height:30px;
+    background:transparent;
+    overflow: visible;
+    display: flex;
+    justify-content: space-between;
+}
+.groww > div{
+    width:15px;
+    height: 15px;
+    aspect-ratio: 1;
+    background: white;
+    border-radius: 50%;
+    position:relative;
+}
+.groww1{
+    animation: grow 500ms alternate infinite;
+}
+.groww2{
+    animation: grow 500ms alternate infinite;
+    animation-delay: 100ms;
+}
+.groww3{
+    animation: grow 500ms alternate infinite;
+    animation-delay: 200ms;
+}
+
+
+
+.sec3{
+    width:100%;
+    height:100vh;
+    display: flex;
+    background: white;
+    flex-direction: column;
+    
+}
+.sec3 > div{
+    flex-grow: 1;
+}
+
+
+.contactConNav{
+    width:100%;
+    display: flex;
+    height: 100%;
+}
+.contactConNav > div{
+    width:100%;
+}
+.contactUs{
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    height:100%;
+    justify-content: center;
+    gap:0;
+    padding-left: 10%;
+    gap:5%;
+    transition: background 200ms;
+}
+
+.contactUs > div{
+    display: flex;
+    flex-direction: column;
+}
+
+.contactUs input{
+    width:60%;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom:  2px black solid;
+    background: none;
+    outline: none;
+    transition: all 500ms;
+    
+
+}
+.contactUs input:hover{
+    width:65%;
+
+
+
+}
+.contactUs textarea{
+    width:60%;
+    height:100px;
+}
+.contactMe{
+    font-size: 2rem;
+}
+
+
+
+
+.nav2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap:7%;
+    padding-left: 15%;
+
+}
+.nav2 li{
+    list-style-type: none;
+}
+
+.nav2 a{
+    text-decoration: none;
+    color:black;
+    height:100%;
+    height:100%;
+}
+
+
+.logoLoad{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: "Blackadder",'Courier New', Courier, monospace;
+    font-size: large;
+}
+.logoLoadThreeJump{
+    width:50px;
+    height:40px;
+    display:flex;
+    justify-content: space-between;
+    margin-top: 30%;
+}
+.logoLoadThreeJump div{
+    width:15px;
+    height:15px;
+    aspect-ratio: 1;
+    background: black;
+    border-radius: 50%;
+    color:rgb(107, 96, 96);
+}
+
+@keyframes grow{
+    to{
+        scale:1.5;
+    }
+}
+
+@keyframes moveUp{
+    to{
+        transform: translateY(-10px);
+    }
+}
+
+
+
+
+@media (max-width:900px){
+    .aboutMe{
+        width:35%;
+    }
+}
